@@ -1151,7 +1151,7 @@ OUTPUT_PATH ?= _build/
 
 ifeq ($(NRF_MODEL), nrf51)
   CPUFLAGS = -mthumb -mcpu=cortex-m0 -march=armv6-m
-else ifneq (,$(filter $(NRF_IC),nrf52832 nrf52840_xxaa))
+else ifneq (,$(filter $(NRF_IC),nrf52810 nrf52832 nrf52840_xxaa))
   CPUFLAGS = -mthumb -mcpu=cortex-m4 -march=armv7e-m -mfpu=fpv4-sp-d16 -mfloat-abi=hard
 endif
 
